@@ -1,0 +1,80 @@
+body {
+    height: 100vh;
+    padding: 50px;
+    background-color: #d2d2d2;
+    overflow: hidden;
+}
+
+body>div {
+    background-color: red;
+    height: max-content;
+    width: max-content;
+}
+
+.canvas {
+    width: 350px;
+    height: 500px;
+    background-color: #ffffff;
+    overflow: hidden;
+    position: fixed;
+    padding: 10px;
+    background-clip: padding-box;
+}
+
+.pos-fixed.top-right {
+    top: 0;
+    right: 0;
+}
+
+.pos-fixed.top-right {
+    bottom: 0;
+    right: 0;
+}
+
+.pos-fixed.bottom-left {
+    top: 0;
+    left: 0;
+}
+
+.pos-fixed.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.canvas>div {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgb(0, 162, 255);
+    background: rgb(0, 110, 255);
+}
+
+.top-right,
+.bottom-left {
+    cursor: ne-resize;
+}
+
+.top-left,
+.bottom-right {
+    cursor: se-resize;
+}
+
+.top-left,
+.top-right {
+    top: 0;
+}
+
+.bottom-left,
+.bottom-right {
+    bottom: 0;
+}
+
+.top-left,
+.bottom-left {
+    left: 0;
+}
+
+.top-right,
+.bottom-right {
+    right: 0;
+}
