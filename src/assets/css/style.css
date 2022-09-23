@@ -272,6 +272,7 @@ aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .c
 
 aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .create-element button:active {
     transform: scale(.97, .97);
+    transition: transform .2s ease-in-out;
 }
 
 aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .response {
@@ -289,6 +290,47 @@ aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .r
     border: 1px solid #000000;
     overflow: hidden;
 
+}
+
+aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .response>.not-found {
+    background: none !important;
+    border: 0px !important;
+    overflow: hidden;
+    position: absolute !important;
+
+}
+
+aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .response>.not-found .not-found-content {
+    display: block !important;
+}
+
+aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .response>.not-found .not-found-content h4 {
+    text-transform: capitalize;
+    text-align: center;
+}
+aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .response>.not-found  .msg{
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+}
+
+aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .response>.not-found .not-found-body {
+    padding-top: 20px !important;
+    text-align: center;
+}
+
+aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .response>.not-found .not-found-body svg {
+    width: 60px;
+    height: 60px;
+}
+aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .response>.not-found .not-found-body>div>div{
+    padding: 10px 10px;
+}
+aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .response>.not-found .not-found-body svg path:first-child {
+    fill: rgb(88, 151, 245);
+}
+
+aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .response>.not-found .not-found-body svg path:last-child {
+    fill: #18191B;
 }
 
 aside.aside .show-content-tag-name .body-content-show-tag-name .response-data .response>div>div {
@@ -392,6 +434,7 @@ header.app-header .header-content {
 /* styles main */
 main.main {
     flex-grow: 20;
+    position: relative;
 }
 
 main.main .contant-main {
@@ -1003,7 +1046,75 @@ footer.app-footer .footer-content {
 
 }
 
+.btn-save-canvas {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.btn-save-canvas button {
+    color: white;
+    background-color: rgb(50, 117, 255);
+    border: 2px solid rgb(88, 151, 245);
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transition: transform .2s ease-in-out;
+}
+
+.btn-save-canvas button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 45px;
+}
+
+.btn-save-canvas button:active,
+.btn-save-canvas button.send-active {
+    transform: scale(.97, .97);
+}
+
+.btn-save-canvas button.send-active.spainers {
+    pointer-events: none !important;
+    cursor: not-allowed !important;
+}
+
+.btn-save-canvas button::after {
+    content: attr(data-after);
+}
+
+.btn-save-canvas button.send-active.spainers::after {
+    content: "";
+    background-color: transparent;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: solid 6px rgb(88, 151, 245);
+    border-left-color: #18191B;
+    animation: spainers .5s cubic-bezier(.42, 0, .58, 1) infinite;
+}
+
 /*  */
 
+.create-tag{
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    width: max-content;
+    height: max-content;
+}
 
 /* end settings styles for childern app header  */
