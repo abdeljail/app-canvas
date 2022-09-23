@@ -5,6 +5,9 @@ module.exports = {
   mode: "development",
   devtool: "eval-source-map",
   devServer: {
+    proxy: { // proxy URLs to backend development server
+      '/api': 'http://localhost:3000'
+    },
     static: {
       directory: path.resolve(__dirname, "../", "frontEnd"),
       watch: true,

@@ -5,7 +5,7 @@ const { generateHtmlPlugins } = require("./helpers.js");
 const PATH_OUTPUT = "assets/"
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, "../", "src/js/scripts/pages/index.js"),
+    index: path.resolve(__dirname, "../", "src/js/pages/index.js"),
   },
   output: {
     path: path.resolve(__dirname, "../", "frontEnd"),
