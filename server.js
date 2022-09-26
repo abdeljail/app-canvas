@@ -81,11 +81,20 @@ app.use(`${process.env.APP_URL_APIS_POST}templete`, postTemplete);
 ++++++
 */
 
+/**
+ * send files html for client
+ */
 
-app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/frontEnd/index.html');
-});
+const admin = require("./backEnd/routers/pages/admin/admin.router");
+const image = require("./backEnd/routers/pages/admin/image.router");
+const design = require("./backEnd/routers/pages/templete.router");
+app.use('/admin', admin);
+app.use('/image', image);
+app.use('/design', design);
 
+/**
+ * send files html for client
+ */
 
 app.listen(port, () => {
     console.log(nodeEnv);

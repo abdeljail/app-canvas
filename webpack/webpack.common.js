@@ -4,8 +4,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { generateHtmlPlugins } = require("./helpers.js");
 const PATH_OUTPUT = "assets/"
 module.exports = {
+  stats: {
+    children: false,
+  },
   entry: {
     index: path.resolve(__dirname, "../", "src/js/pages/index.js"),
+    admin: path.resolve(__dirname, "../", "src/js/pages/admin/index.js"),
+    image: path.resolve(__dirname, "../", "src/js/pages/admin/image.js"),
   },
   output: {
     path: path.resolve(__dirname, "../", "frontEnd"),
@@ -48,16 +53,6 @@ module.exports = {
             esModule: false,
           }
         }]
-      },
-      {
-        test: /\.hbs$/,
-        use: {
-          loader: "handlebars-loader",
-          options: {
-            // This option tells to to require the assest 👇
-            inlineRequires: '\/assets\/',
-          }
-        },
       }
 
     ],
