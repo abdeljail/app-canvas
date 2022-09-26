@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+        div(id="app")
+            div(id="app-content" class="app-content")
+
+                //include component headers
+                include ../components/header.a.pug
+
+                main(id="main" class="main" role="main")
+                    div(class="contant-main" id="contant-main")
+                        section(id="create-image" class="create-image")
+                            div(class="container")
+                                div(class="content-section-create-image")
+                                    div(id="upload-image" class="upload-image")
+                                        div 
+                                            label(for="upload") 
+                                                span(role="label" class="label") upload image
+                                                div(class="read-file") 
+                                                    img(src="" , id="image", alt="read file image for upload")
+                                            input(type="file" id="upload" name="upload" accept="image/*")
+                                        div(class="btn-send-file")
+                                            button(id="send-file" class="send-file" name="send file" type="button" data-after="send")
+                                    div(class="aside" id="aside" role="aside")
+                                        div show all images
+                footer(id="app-footer" class="app-footer")
+                    div(class="footer-content") created by abdeljalil khalal
+
+                    

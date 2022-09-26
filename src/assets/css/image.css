@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Roboto:wght@100&display=swap');
+
+body {
+    background-color: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hind', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1300px;
+    margin: auto !important;
+    padding: 0 15px;
+}
+
+header {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(36, 36, 125, 1) 0%, rgba(5, 133, 228, 1) 0%, rgba(3, 169, 240, 0.989233193277311) 47%, rgba(0, 212, 255, 1) 100%);
+    border-bottom: 1px solid rgb(50, 117, 255);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links ul li {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.nav-links ul li a {
+    padding: 10px 16px;
+    display: block;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #fff;
+    transition: .4s linear color;
+}
+.nav-links ul li a:hover{
+    color:#18191B 
+}
+.create-image{
+    display: flex;
+    align-items: center;
+    height: 90vh;
+}
+.content-section-create-image{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.upload-image{
+    flex-grow: 2;
+    height: inherit;
+}
+.upload-image > div:first-of-type{
+    height: 80%;
+}
+.upload-image label{
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    padding-right: 20px;
+}
+.upload-image label span{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    display: block;
+    padding-bottom: 20px;
+}
+.upload-image label span + div{
+    padding: 20px;
+    text-align: center;
+    width: inherit;
+    transition: .2s ease-in-out background-color;
+}
+.upload-image label:hover span + div{
+    background-color: #18191b3b;
+}
+.upload-image label span + div img{
+    width: 600px;
+
+}
+.upload-image input{
+    display: none;
+}
+.upload-image > div:last-of-type {
+    height: 20%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-right: 20px;
+}
+.upload-image > div:last-of-type button {
+    color: white;
+    background-color: rgb(50, 117, 255);
+    border: 2px solid rgb(88, 151, 245);
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transition: transform .2s ease-in-out;
+}
+
+.upload-image > div:last-of-type button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 45px;
+}
+
+.upload-image > div:last-of-type button:active,
+.upload-image > div:last-of-type button.send-active {
+    transform: scale(.97, .97);
+}
+
+.upload-image > div:last-of-type button.send-active.spainers {
+    pointer-events: none !important;
+    cursor: not-allowed !important;
+}
+
+.upload-image > div:last-of-type button::after {
+    content: attr(data-after);
+}
+
+.upload-image > div:last-of-type button.send-active.spainers::after {
+    content: "";
+    background-color: transparent;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: solid 6px rgb(88, 151, 245);
+    border-left-color: #18191B;
+    animation: spainers .5s cubic-bezier(.42, 0, .58, 1) infinite;
+}
+.aside{
+    flex-grow: 1;
+    background: rgb(167, 167, 167);
+    height: inherit;
+    max-height: inherit;
+    overflow-x: auto;
+}
