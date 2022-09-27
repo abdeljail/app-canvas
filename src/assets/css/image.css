@@ -55,64 +55,80 @@ nav {
     color: #fff;
     transition: .4s linear color;
 }
-.nav-links ul li a:hover{
-    color:#18191B 
+
+.nav-links ul li a:hover {
+    color: #18191B
 }
-.create-image{
+
+.create-image {
     display: flex;
     align-items: center;
     height: 90vh;
 }
-.content-section-create-image{
+
+.content-section-create-image {
     height: 70vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.upload-image{
+
+.upload-image {
     flex-grow: 2;
     height: inherit;
+    border: 1px solid #18191B;
+    flex-shrink: 2;
 }
-.upload-image > div:first-of-type{
+
+.upload-image>div:first-of-type {
     height: 80%;
 }
-.upload-image label{
+
+.upload-image label {
     cursor: pointer;
     display: block;
-    height: 100%;
-    padding-right: 20px;
+    min-height: 100%;
+    padding: 20px;
 }
-.upload-image label span{
+
+.upload-image label span {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1.5rem;
     display: block;
     padding-bottom: 20px;
 }
-.upload-image label span + div{
+
+.upload-image label span+div {
     padding: 20px;
     text-align: center;
     width: inherit;
     transition: .2s ease-in-out background-color;
 }
-.upload-image label:hover span + div{
+
+.upload-image label:hover span+div {
     background-color: #18191b3b;
 }
-.upload-image label span + div img{
+
+.upload-image label span+div img {
     width: 600px;
 
 }
-.upload-image input{
+
+.upload-image input {
     display: none;
 }
-.upload-image > div:last-of-type {
+
+.upload-image>div:last-of-type {
     height: 20%;
     display: flex;
     justify-content: end;
     align-items: end;
     padding-right: 20px;
+    padding-bottom: 20px;
 }
-.upload-image > div:last-of-type button {
+
+.upload-image>div:last-of-type button {
     color: white;
     background-color: rgb(50, 117, 255);
     border: 2px solid rgb(88, 151, 245);
@@ -126,7 +142,7 @@ nav {
     transition: transform .2s ease-in-out;
 }
 
-.upload-image > div:last-of-type button {
+.upload-image>div:last-of-type button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,21 +150,21 @@ nav {
     height: 45px;
 }
 
-.upload-image > div:last-of-type button:active,
-.upload-image > div:last-of-type button.send-active {
+.upload-image>div:last-of-type button:active,
+.upload-image>div:last-of-type button.send-active {
     transform: scale(.97, .97);
 }
 
-.upload-image > div:last-of-type button.send-active.spainers {
+.upload-image>div:last-of-type button.send-active.spainers {
     pointer-events: none !important;
     cursor: not-allowed !important;
 }
 
-.upload-image > div:last-of-type button::after {
+.upload-image>div:last-of-type button::after {
     content: attr(data-after);
 }
 
-.upload-image > div:last-of-type button.send-active.spainers::after {
+.upload-image>div:last-of-type button.send-active.spainers::after {
     content: "";
     background-color: transparent;
     display: block;
@@ -160,10 +176,92 @@ nav {
     border-left-color: #18191B;
     animation: spainers .5s cubic-bezier(.42, 0, .58, 1) infinite;
 }
-.aside{
-    flex-grow: 1;
-    background: rgb(167, 167, 167);
+
+.aside {
+    flex-grow: .4;
     height: inherit;
     max-height: inherit;
     overflow-x: auto;
+    border: 1px solid #18191B;
+    border-left: none !important;
+    flex-shrink: 1;
 }
+
+
+.aside::-webkit-scrollbar {
+    width: 8px;
+}
+
+.aside::-webkit-scrollbar-track {}
+
+.aside::-webkit-scrollbar-thumb {
+    background-color: #18191B;
+    border-radius: 50px;
+}
+
+.aside>div {
+    height: 700px !important;
+    padding: 10px;
+}
+
+.aside div .show-img {
+    border: 1px solid #d9d9d9;
+    height: 150px !important;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .2s border ease-in-out;
+}
+
+.aside div .show-img:hover {
+    border-color: rgb(88, 151, 245);
+}
+
+.aside div .show-img img {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+}
+
+
+/* style alert */
+
+/* style alert */
+.content-alert {
+    position: relative;
+    background-color: black;
+}
+
+.alert {
+    position: absolute;
+    top: 0px !important;
+    border: 1px solid;
+    padding: 20px 16px;
+    border-radius: 2px;
+    top: -76px !important;
+    width: 100%;
+}
+
+.alert-error {
+    color: rgb(235, 87, 87);
+    border-color: rgba(235, 87, 87, 0.5);
+    background: rgba(235, 87, 87, 0.1);
+}
+
+.alert-error span:last-child{
+    position: absolute;
+    cursor: pointer;
+    right: 0px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.alert-error svg {
+    width: 32px;
+    height: 32px;
+}
+
+.alert-error svg path {
+    fill: rgb(235, 87, 87);
+}
+
+/* style alert */
