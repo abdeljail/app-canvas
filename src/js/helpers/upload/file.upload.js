@@ -2,7 +2,7 @@ const OPTIONS_IMGS = ["image/jpg", "image/png", "image/jpeg", "image/gif", "imag
 
 const uplaodImage = (img) => {
 
-        if (img.size > 500000)
+    if (img.size > 500000)
         return {
             status: false,
             msg: "size must be between 1mg and 50mg",
@@ -19,6 +19,33 @@ const uplaodImage = (img) => {
 
 }
 
+const readerFile = ({ element, file }) => {
+
+    try {
+
+        if (!(element instanceof Element))
+            throw new Error('Invalid Element DOM  "' + element + '"');
+
+        if (!(file instanceof Object))
+            throw new Error('Invalid file  "' + element + '"');
+
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            element.src = e.target.result
+        }
+        reader.readAsDataURL(file);
+
+        return element
+
+    } catch (error) {
+        console.error(error);
+    }
+
+
+}
+
 export {
     uplaodImage,
+    readerFile
 }

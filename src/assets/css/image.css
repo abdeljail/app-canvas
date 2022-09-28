@@ -89,6 +89,33 @@ nav {
     display: block;
     min-height: 100%;
     padding: 20px;
+    position: relative;
+}
+
+.btn-dlt {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.dlt-img {
+    width: 100%;
+    padding: 10px 15px;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgb(235, 87, 87);
+    border-color: rgba(235, 87, 87, 0.5);
+    background: rgba(235, 87, 87, 0.1);
+    font-weight: bold;
+    border: 1px solid;
+    font-size: 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.dlt-img.show-btn {
+    visibility: visible !important;
 }
 
 .upload-image label span {
@@ -126,9 +153,11 @@ nav {
     align-items: end;
     padding-right: 20px;
     padding-bottom: 20px;
+    padding-top: 20px;
+    position: relative;
 }
 
-.upload-image>div:last-of-type button {
+.upload-image>div:last-of-type>div:last-of-type button {
     color: white;
     background-color: rgb(50, 117, 255);
     border: 2px solid rgb(88, 151, 245);
@@ -223,7 +252,7 @@ nav {
 }
 
 
-/* style alert */
+
 
 /* style alert */
 .content-alert {
@@ -237,17 +266,22 @@ nav {
     border: 1px solid;
     padding: 20px 16px;
     border-radius: 2px;
-    top: -76px !important;
     width: 100%;
+    transition: opacity .6s ease;
+    top: -76px !important;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .alert-error {
     color: rgb(235, 87, 87);
     border-color: rgba(235, 87, 87, 0.5);
     background: rgba(235, 87, 87, 0.1);
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
-.alert-error span:last-child{
+.alert-error span:last-child {
     position: absolute;
     cursor: pointer;
     right: 0px;
