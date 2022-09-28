@@ -66,7 +66,12 @@ app.use(`${process.env.APP_URL_APIS_GET}search`, getSearch);
  */
 
 const postTemplete = require("./backEnd/routers/templete/post.router");
+
+const postImage = require("./backEnd/routers/image/post.router");
+
 app.use(`${process.env.APP_URL_APIS_POST}templete`, postTemplete);
+
+app.use(`${process.env.APP_URL_APIS_POST}image`, postImage);
 
 
 /**
